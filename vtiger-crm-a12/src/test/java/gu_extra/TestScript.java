@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import generic_utility.WebDriverUtility;
+import generic_utility.WebDriverUtility2;
 
 public class TestScript 
 {
@@ -15,7 +15,7 @@ public class TestScript
 
 		WebDriver driver = new ChromeDriver();
 		
-		WebDriverUtility wdUtil = new WebDriverUtility(driver);
+		WebDriverUtility2 wdUtil = new WebDriverUtility2(driver);
 
 		wdUtil.openUrl();
 		
