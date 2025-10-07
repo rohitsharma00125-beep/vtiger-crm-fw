@@ -7,62 +7,44 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CheckOutOne 
 {
-	
-	public CheckOutOne(WebDriver driver) 
+
+    // ===== Initialization =====
+    public CheckOutOne(WebDriver driver) 
+    {
+        PageFactory.initElements(driver, this);
+    }
+
+    // ===== Element Declarations =====
+
+    @FindBy(id = "first-name")//first name text field
+    private WebElement FN;
+
+    @FindBy(id = "last-name")//last name text field
+    private WebElement LN;
+
+    @FindBy(id = "postal-code")//zip/postal code
+    private WebElement PC;
+
+    @FindBy(xpath = "//input[@value='CONTINUE']")//continue button
+    private WebElement CB;
+
+//	Getter Method
+	public WebElement getFN() 
 	{
-		PageFactory.initElements(driver, this);
+		return FN;
 	}
 	
-	@FindBy(linkText ="Checkout: Your Information")
-	private WebElement heading1;//page heading
-	
-	public WebElement getHeading1() 
+	public WebElement getLN() 
 	{
-		return heading1;
-		
+		return LN;
 	}
-	
-	
-	@FindBy(id="first-name")
-	private WebElement fname;
-	
-	public WebElement getFname() 
+	public WebElement getPC() 
 	{
-		return fname;
-		
+		return PC;
 	}
-	
-	@FindBy(id="last-name")
-	private WebElement lname;
-	
-	public WebElement getLname() 
+	public WebElement getCB() 
 	{
-		return lname;
-		
+		return CB;
 	}
-	
-	@FindBy(id="postal-code")
-	private WebElement postalcode;
-	
-	public WebElement getPostalCode() 
-	{
-		return postalcode;
-		
-	}
-	
-	@FindBy(className = "btn_primary cart_button")
-	private WebElement continuebutton;
-	
-	public WebElement getContinueButton() 
-	{
-		return continuebutton;
-		
-	}
-	
-	
-	
-	
-	
-	
 	
 }

@@ -4,125 +4,106 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 
-public class SauceDemo {
-	public static void main(String[] args) throws InterruptedException 
-	{
-		System.setProperty("webdriver.edge.driver", "./src/test/resources/msedgedriver.exe");
-		WebDriver driver = new EdgeDriver();
+public class SauceDemo 
+{
+    	public static void main(String[] args) throws InterruptedException 
+    	{
+    	System.setProperty("webdriver.edge.driver", "./src/test/resources/msedgedriver.exe");//edgedriver not working that's why add this line. so ignore this line
+        WebDriver driver = new EdgeDriver();
+        driver.manage().window().maximize();
 
-		driver.get("https://www.saucedemo.com/v1/");
+        driver.get("https://www.saucedemo.com/v1/");
+        Thread.sleep(3000);
 
-		LoginPage lp = new LoginPage(driver);
+        // ===== LOGIN PAGE =====
+        LoginPage lp = new LoginPage(driver);
 
-		// login
-		// Declaration with initialization
-		WebElement uN = lp.getUn();
-		WebElement pwD = lp.getPwd();
-		WebElement logiN = lp.getLogin();
+        // Declaration & initialization
+        WebElement un = lp.getUn();
+        WebElement pwd = lp.getPwd();
+        WebElement login = lp.getLogin();
 
-		driver.navigate().refresh();
+        // Refreshing before use (optional)
+        driver.navigate().refresh();
+        Thread.sleep(2000);
 
-		// Utilization
-		uN.sendKeys("standard_user");
-		pwD.sendKeys("secret_sauce");
-		logiN.click();
-		Thread.sleep(5000);
-		
+        // Utilization
+        un.sendKeys("standard_user");
+        pwd.sendKeys("secret_sauce");
+        login.click();
 
-		// verify
-		HomePage hp = new HomePage(driver);
+        // ===== VERIFY LOGIN =====
+        HomePage hp = new HomePage(driver);
+        WebElement logo = hp.getLogo();
 
-		// Declaration & initialization
-		WebElement logo = hp.getLogo();
+        if (logo.isDisplayed()) 
+        {
+            System.out.println("Logged in successfully!");
+        } 
+        else 
+        {
+            System.out.println(" Could not log in!");
+        }
 
-		// utilization
-		if (logo.isDisplayed()) 
-		{
-			System.out.println("Logged in successfully!!!!");
-		} 
-		else 
-		{
-			System.out.println("Could not log in....");
-		}
+        Thread.sleep(2000);
 
-		Thread.sleep(5000);
+        // ===== ADD PRODUCT TO CART =====
+        WebElement addToCart = hp.getAddToCartBikeLight();
+        addToCart.click();
+        Thread.sleep(5000);
 
-		// Click on add to cart button
-		CartPage cp = new CartPage(driver);
-		WebElement cartButton = cp.getCartButton();
-		cartButton.click();
-		Thread.sleep(5000);
+        // ===== OPEN CART =====
+        hp.openCart();
+        Thread.sleep(2000);
 
-		// Click on cart logo
+        // ===== CART PAGE =====
+        CartPage cp = new CartPage(driver);
 
-		WebElement cartLogo = cp.getCartLogo();
-		cartLogo.click();
-		Thread.sleep(5000);
+        // Click on Checkout button
+        WebElement clickcheckoutButton = cp.getCheckoutButton();
+        clickcheckoutButton.click();
+        Thread.sleep(2000);
 
-		// click on checkout button
-		WebElement coButton = cp.getcheckOutButton();
-		coButton.click();
-		Thread.sleep(5000);
-		
-		//verify checkoutone page. it is showing in url
-		CheckOutOne coone =new CheckOutOne(driver);
-		WebElement heading1 = coone.getHeading1();
-		if(heading1.isDisplayed())
-		{
-			System.out.println("checkoutone page is displayed");
-		}
-		else
-		{
-			System.out.println("something went wrong");
-		}
-		
-		WebElement fName =coone.getFname();//first name text field
-		fName.sendKeys("Rohit");
-		
-		WebElement lName =coone.getLname();//last name text field
-		fName.sendKeys("Sharma");
-		
-		WebElement pCode =coone.getPostalCode();//zip/postal code text field
-		fName.sendKeys("122001");
-		
-		WebElement contiButton =coone.getContinueButton();//click on continue button
-		contiButton.click();
-		Thread.sleep(5000);
-		
-		
-		//verify checkouttwo page
-		CheckOutTwo cotwo = new CheckOutTwo(driver);
-		
-		WebElement heading2 = cotwo.getHeading2();
-		if(heading2.isDisplayed())
-		{
-			System.out.println("checkouttwo page is displayed");
-		}
-		else
-		{
-			System.out.println("something went wrong");
-		}
-		
-		WebElement fiButton = cotwo.getFinishButton();
-		fiButton.click();
-		
-		
-		//verify confirmation/checkout page
-		ConfirmationPage conpage = new ConfirmationPage(driver);
-		WebElement ponyLogo = conpage.getPonyLogo();
-		
-		if(ponyLogo.isDisplayed())
-		{
-			System.out.println("checkout page is displayed");
-			
-		}
-		else
-		{
-			System.out.println("something went wrong");
-		}
-		
-		
-		
-	}
+        // ===== CHECKOUTONE PAGE =====
+        CheckOutOne cp1 = new CheckOutOne(driver);
 
+        // Declaration & initialization
+        WebElement fn = cp1.getFN();
+        WebElement ln = cp1.getLN();
+        WebElement pc = cp1.getPC();
+        WebElement cb = cp1.getCB();
+
+        // Utilization
+        fn.sendKeys("Rohit");
+        ln.sendKeys("Sharma");
+        pc.sendKeys("122001");
+        cb.click();
+        Thread.sleep(3000); 
+        
+     // ===== Checkouttwo PAGE =====
+        CheckOutTwo ch2 = new CheckOutTwo(driver);
+
+        // Click Checkout button
+        WebElement clickfinishButton = ch2.getFinishButton();
+        clickfinishButton.click();
+        Thread.sleep(2000);
+        
+        
+        
+        //verify confirmation page
+        ConfirmationPage confpage = new ConfirmationPage(driver);
+        // Click Checkout button
+        WebElement plogo = confpage.getPonyLogo();
+        if (plogo.isDisplayed()) 
+        {
+            System.out.println("Thank you for your order");
+        } 	
+        else 
+        {
+            System.out.println(" Something went wrong");
+        }
+        	Thread.sleep(3000);
+        	driver.quit();
+        
+    	}
 }

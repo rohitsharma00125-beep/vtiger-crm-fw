@@ -5,14 +5,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginPage 
+{
 
-//	Initialization
-	public LoginPage(WebDriver driver) {
+	//	Initialization
+	public LoginPage(WebDriver driver) 
+	{
 		PageFactory.initElements(driver, this);
 	}
 
-//	declaration
+	//	declaration
 	@FindBy(id = "user-name")
 	private WebElement un;
 
@@ -22,16 +24,19 @@ public class LoginPage {
 	@FindBy(id = "login-button")
 	private WebElement login;
 
-//	Getters
-	public WebElement getUn() {
+	//	Getter Method
+	public WebElement getUn() 
+	{
 		return un;
 	}
 	
-	public WebElement getPwd() {
+	public WebElement getPwd() 
+	{
 		return pwd;
 	}
 	
-	public WebElement getLogin() {
+	public WebElement getLogin() 
+	{
 		return login;
 	}
 }
