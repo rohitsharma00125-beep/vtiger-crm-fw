@@ -15,7 +15,7 @@ public class JavaUtility
 
 		public static int generateRandomNum() 
 		{
-		double random = Math.random() * 9999;
+		double random = Math.random() * 100;
 		int ranNum = (int) random;
          
 		return ranNum;

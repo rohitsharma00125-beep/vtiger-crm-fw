@@ -11,7 +11,7 @@ public class LoginPage
 	//	Initialization
 	public LoginPage(WebDriver driver) 
 	{
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);//always write this in second position
 	}
 
 	//	declaration

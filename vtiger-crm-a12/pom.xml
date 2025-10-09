@@ -43,6 +43,11 @@
             <artifactId>webdrivermanager</artifactId>
             <version>5.9.2</version>
         </dependency>
+        <dependency>
+        	<groupId>QSpider</groupId>
+        	<artifactId>com.actiTime</artifactId>
+        	<version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -10,7 +10,7 @@ import generic_utility.WebDriverUtility2;
 
 public class TestScript 
 {
-	public static void main(String[] args) 
+	public static void main(String[] args) throws InterruptedException 
 	{
 
 		WebDriver driver = new ChromeDriver();
@@ -27,8 +27,8 @@ public class TestScript
 //		Actions act = new Actions(driver);
 //		act.moveToElement(profilePic).build().perform();
 		wdUtil.hover(profilePic);
-		
-		
+		Thread.sleep(3000);
+		driver.quit();
 		
 	}
 }

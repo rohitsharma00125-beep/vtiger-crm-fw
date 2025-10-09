@@ -19,18 +19,18 @@ public class SauceDemo
         LoginPage lp = new LoginPage(driver);
 
         // Declaration & initialization
-        WebElement un = lp.getUn();
-        WebElement pwd = lp.getPwd();
-        WebElement login = lp.getLogin();
+        WebElement uN = lp.getUn();
+        WebElement pwD = lp.getPwd();
+        WebElement logiN = lp.getLogin();
 
         // Refreshing before use (optional)
         driver.navigate().refresh();
         Thread.sleep(2000);
 
         // Utilization
-        un.sendKeys("standard_user");
-        pwd.sendKeys("secret_sauce");
-        login.click();
+        uN.sendKeys("standard_user");
+        pwD.sendKeys("secret_sauce");
+        logiN.click();
 
         // ===== VERIFY LOGIN =====
         HomePage hp = new HomePage(driver);

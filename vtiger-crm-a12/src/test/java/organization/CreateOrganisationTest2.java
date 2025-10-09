@@ -1,4 +1,4 @@
-package organisation;
+package organization;
 
 import java.time.Duration;
 
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class CreateOrganisationTest {
+public class CreateOrganisationTest2 {
 	public static void main(String[] args) throws InterruptedException {
 //		Open Browser 
 		WebDriver driver = new ChromeDriver();
