@@ -17,6 +17,7 @@ public class Demo2
 		{
 			Assert.assertTrue(false);
 			System.out.println("boy");
+			
 		}
 
 		@Test(dependsOnMethods = "modify")

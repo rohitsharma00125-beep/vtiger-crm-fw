@@ -11,10 +11,11 @@ public class Demo1
 			System.out.println("Hi");//print in console
 		}
 		
-		@Test
+		@Test(enabled = false)
 		public void case2()
 		{
 			Reporter.log("hello");// print in report
+			
 		}
 
 		@Test

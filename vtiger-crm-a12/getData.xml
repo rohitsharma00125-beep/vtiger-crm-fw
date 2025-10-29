@@ -1,0 +1,39 @@
+
+
+
+
+<suite parallel="tests" name="suite">
+	<test parallel="tests" name="testRunner1">
+			<parameter name="bro" value="edge" />
+			<parameter name="url" value="http://localhost:8888"/>
+			<parameter name="un" value="admin"/>
+			<parameter name="pwd" value="manager"/>
+		<classes>
+			
+			<class name="types_of_execution1.Demo3"/>
+		</classes>
+	</test>
+
+
+	<test parallel="tests" name="testRunner2">
+			<parameter name="bro" value="chrome" />
+			<parameter name="url" value="http://localhost:8888"/>
+			<parameter name="un" value="admin"/>
+			<parameter name="pwd" value="manager"/>
+		<classes>
+			
+			<class name="types_of_execution1.Demo4"/>
+		</classes>
+	</test>
+
+	<test parallel="tests" name="testRunner3">
+				<parameter name="bro" value="firefox" />
+				<parameter name="url" value="http://localhost:8888"/>
+				<parameter name="un" value="admin"/>
+				<parameter name="pwd" value="manager"/>
+		<classes>
+	
+			<class name="types_of_execution1.Demo5"/>
+		</classes>
+	</test>
+</suite>
