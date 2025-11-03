@@ -12,7 +12,7 @@ import com.aventstack.extentreports.Status;
 import base_utility.BaseClass;
 import generic_utility.JavaUtility;
 
-public class SauceDemo2 extends BaseClass {
+public class Vtiger extends BaseClass {
 
 	@Test
 	public void login1() {
