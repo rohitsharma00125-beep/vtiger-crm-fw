@@ -9,8 +9,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 
-@Listeners(listeners_extra.List_Imp.class)
+@Listeners(listener_utility.List_Imp.class)
 public class JustToProve {
 
 	@BeforeSuite
@@ -33,10 +34,10 @@ public class JustToProve {
 		System.out.println("login");
 	}
 
-//	@Test
-//	public void case1() {
-//		System.out.println("Test method");
-//	}
+	@Test
+	public void case1() {
+		System.out.println("Test method");
+	}
 
 	@AfterMethod
 	public void logout() {

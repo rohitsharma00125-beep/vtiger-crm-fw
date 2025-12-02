@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="listeners_extra.List_Imp"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite name="Failed suite [Failed suite [Failed suite [Default suite]]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)(failed)(failed)">
     <classes>
-      <class name="listeners_extra.JustToProve3">
-        <methods>
-          <include name="case3"/>
-          <include name="case31"/>
-        </methods>
-      </class> <!-- listeners_extra.JustToProve3 -->
-      <class name="listeners_extra.JustToProve1">
+      <class name="working_with_assertion.HardAssertDemo">
         <methods>
           <include name="case1"/>
         </methods>
-      </class> <!-- listeners_extra.JustToProve1 -->
+      </class> <!-- working_with_assertion.HardAssertDemo -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [Default suite]]] -->

@@ -117,6 +117,7 @@ public class Contact {
 		driver.findElement(By.linkText("Sign Out")).click();
 		
 		Thread.sleep(3000);
+		System.out.println("prog is complete");
 		driver.close();
 
 	}

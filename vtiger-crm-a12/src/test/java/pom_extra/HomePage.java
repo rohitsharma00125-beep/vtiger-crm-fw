@@ -19,7 +19,7 @@ public class HomePage
 		// Bike LIGHT Add to Cart 
 		
 		@FindBy(xpath ="//div[text()='Sauce Labs Bike Light']/ancestor::div[@class='inventory_item']//button")
-		//we used //button in path. Because it find the button element in whole ancestor path.new thing to learn.
+		//we used //button in path. Because it find the button element in whole ancestor path. New thing to learn.
 	    private WebElement addToCartBikeLight;
 
 	    @FindBy(className = "shopping_cart_link")

@@ -17,24 +17,22 @@ public class GetMultipleDatafromExcelFile
 	Workbook wb = WorkbookFactory.create(fis);
 	Sheet sh = wb.getSheet("Class1");
 	
-	for (int i = 1; i <=sh.getLastRowNum(); i++) 
-	{
-		
-		for (int j = 0; j <sh.getRow(i).getLastCellNum(); j++) //gLCN method 1 se start hota hai
-		{
-			String value = sh.getRow(i).getCell(j).getStringCellValue();
-			System.out.println(value);	
-		}
-		//String value1 = sh.getRow(i).getCell(1).getStringCellValue();
-		//System.out.println(value1);
-		
-	}
+			for (int i = 1; i <=sh.getLastRowNum(); i++) 
+			{
+				
+					for (int j = 0; j <sh.getRow(i).getLastCellNum(); j++) //gLCN method 1 se start hota hai
+					{
+						String value = sh.getRow(i).getCell(j).getStringCellValue();
+						System.out.println(value);	
+					}
+					
+				
+			}
+				
 	wb.close();
-    fis.close();
+	fis.close();
 
-	
-	
-	
+
 	}
 
 }

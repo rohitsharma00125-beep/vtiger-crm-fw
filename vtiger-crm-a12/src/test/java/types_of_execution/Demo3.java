@@ -13,6 +13,14 @@ public class Demo3
 	Thread.sleep(5000);
 	driver.quit();
 	}
+	@Test
+	public void case1() throws InterruptedException
+	{
+	WebDriver driver = new ChromeDriver();	
+	Thread.sleep(5000);
+	driver.quit();
+	}
+	
 	
 	
 

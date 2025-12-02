@@ -20,12 +20,14 @@ public class SetDataintoExcelFile {
 		Sheet sh = wb.getSheet("Contact");
 		Row rw = sh.getRow(7);
 		Cell cell = rw.getCell(0);
-		cell.setCellValue("roy");
+		cell.setCellValue("roy2");
 		
 		//click on save button
 		FileOutputStream fos = new FileOutputStream("./src/test/resources/testScriptData.xlsx");
+		
 		wb.write(fos);
-			
+		fis.close();
+		fos.close();	
 	
 	}
 

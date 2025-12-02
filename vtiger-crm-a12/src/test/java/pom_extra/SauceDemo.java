@@ -9,7 +9,7 @@ public class SauceDemo
     	public static void main(String[] args) throws InterruptedException 
     	{
     	System.setProperty("webdriver.edge.driver", "./src/test/resources/msedgedriver.exe");//edgedriver not working that's why add this line. so ignore this line
-        WebDriver driver = new EdgeDriver();
+        WebDriver driver = new EdgeDriver();//use edge driver because other browser gives popup
         driver.manage().window().maximize();
 
         driver.get("https://www.saucedemo.com/v1/");

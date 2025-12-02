@@ -5,7 +5,7 @@
 
 
 
-<suite name="Suite">
+<suite name="Suite" >
   <test  name="SmokeTest">
     <classes>
       <class name="types_of_execution.Demo1">

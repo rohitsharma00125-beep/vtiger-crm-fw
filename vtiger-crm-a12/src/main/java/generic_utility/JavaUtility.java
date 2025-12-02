@@ -10,12 +10,16 @@ public class JavaUtility
 		LocalDateTime now = LocalDateTime.now();//LocalDateTime is a class & now() is a static method
 		System.out.println(now);
 
-		return DateTimeFormatter.ofPattern("HHmmss_ddMMyyyy").format(now);
+		String time= DateTimeFormatter.ofPattern("HHmmss_ddMMyyyy").format(now);
+		
+		return time;
 	}
 
 		public static int generateRandomNum() 
 		{
-		double random = Math.random() * 100;
+		double random = Math.random() * 100;//1 se 100 k bich me number dega
+		
+		
 		int ranNum = (int) random;
          
 		return ranNum;

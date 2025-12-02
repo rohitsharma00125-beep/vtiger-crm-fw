@@ -31,7 +31,7 @@
     </classes>
   </test> 
   
-   <test  parallel="tests" name="TestThread3">
+   <test   parallel="tests" name="TestThread3">
     <classes>
       <class name="types_of_execution.Demo3">
       <methods>

@@ -19,10 +19,11 @@ public class GetDataFromExcelFile {
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sh = wb.getSheet("Class1");
 		Row row = sh.getRow(1);
-		Cell cell = row.getCell(0);
+		Cell cell = row.getCell(2);
 		String value = cell.getStringCellValue();
+		//String value=sh.getRow(1).getCell(0).getStringCellValue();//method chaining se bhi kr skte hai
 		
-		
+	
 		System.out.println(value);
 		wb.close();
 		
