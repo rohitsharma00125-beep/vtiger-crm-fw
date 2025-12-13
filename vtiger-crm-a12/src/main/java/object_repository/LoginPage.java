@@ -26,7 +26,7 @@ public LoginPage(WebDriver driver)
 			@FindBy(name = "user_name"), 
 			@FindBy(css = "input[type='text']"),
 			@FindBy(xpath = "//input[@type='text']")
-		})
+		})//@FindBys use and operator and it is more accurate
 			private WebElement un;*/
 		
 		//Auto - Healing (username text field)
@@ -34,7 +34,7 @@ public LoginPage(WebDriver driver)
 			@FindBy(name = "user_name"), 
 			@FindBy(css = "input[type='text']"),
 			@FindBy(xpath = "//input[@type='text']")
-		})
+		})///@FindAll use or operator and it is less accurate
 			private WebElement un;
 		
 			//password text field

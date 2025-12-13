@@ -4,21 +4,21 @@ import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
 public class List_Imp_Retry implements IRetryAnalyzer {
-	int count = 0;
-	int initCount = 5;
-
+	
+	int initCount = 0;
+	int Count = 5; // retry test case 5 times
 	@Override
 	public boolean retry(ITestResult result) 
 	{
 		
 	
 
-		if (count < initCount) 
+		if (initCount < Count) 
 		{
-			count++;
-			return true;
+			initCount++;
+			return true; // retry the test
 		}
-		return false;
+		return false; // do not retry
 	}
 }
 

@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 public class Demo3 
 {
 
-	@Parameters({"bro","url","un","pwd"})//here we don't use property file
+	@Parameters({"bro","url","un","pwd"})//here we don't use property file & keys should be same as suite file
 	@Test
 	public void case3(String Browser,String URL,String UN, String PWD) throws InterruptedException, IOException 
 	{

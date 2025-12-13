@@ -27,7 +27,7 @@ public class BrokerLinks {
 		System.out.println(links.size());
 
 		for (WebElement i : links) {
-			System.out.println(i.getText());
+			//System.out.println(i.getText());
 			String urlvalue = i.getAttribute("href");
 
 			URL url = new URL(urlvalue);

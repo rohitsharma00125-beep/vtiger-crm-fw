@@ -15,7 +15,7 @@ public class Demo2
 		@Test(dependsOnMethods = "create")
 		public void modify()
 		{
-			Assert.assertTrue(false);
+			Assert.assertTrue(false);//it fail the test case intentionally
 			System.out.println("boy");
 			
 		}

@@ -25,7 +25,7 @@ public class HardAssertDemo
 		Assert.assertNotEquals(a, c);//pass
 
 		Assert.assertNull(obj1);//pass
-		Assert.assertNotNull(obj2);//pass
+		Assert.assertNotNull(obj2);//pass*/
 		
 	}
 

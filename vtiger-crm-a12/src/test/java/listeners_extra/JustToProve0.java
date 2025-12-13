@@ -21,7 +21,7 @@ class JustToProve0 extends BaseClass2
 		Assert.assertTrue(true);
 		//int a = 11 used for fail the test case
 
-       
+       System.out.println("5-12-25");
 		Thread.sleep(2000);
 	}
 

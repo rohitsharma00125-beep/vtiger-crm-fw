@@ -1,5 +1,7 @@
 package listener_utility;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestListener;
@@ -11,6 +13,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import base_utility.BaseClass3;
 import generic_utility.JavaUtility;
 
 public class List_Imp implements ISuiteListener, ITestListener {
@@ -40,18 +43,26 @@ public class List_Imp implements ISuiteListener, ITestListener {
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		String methodName = result.getMethod().getMethodName();
+		String methodName = result.getMethod().getMethodName();//method present in ITestResult interface
 		test = report.createTest(methodName);
 	}
 
 	@Override
-	public void onTestSuccess(ITestResult result) {
+	public void onTestSuccess(ITestResult result) 
+	{
 		test.log(Status.PASS, "This is passing");
+		
+		TakesScreenshot tks = (TakesScreenshot)BaseClass3.sdriver;
+		String ss = tks.getScreenshotAs(OutputType.BASE64);
+		test.addScreenCaptureFromBase64String(ss, JavaUtility.currentTime());	
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		test.log(Status.FAIL, "This is failing");
+		TakesScreenshot tks = (TakesScreenshot)BaseClass3.sdriver;
+		String ss = tks.getScreenshotAs(OutputType.BASE64);
+		test.addScreenCaptureFromBase64String(ss, JavaUtility.currentTime());	
 	}
 
 	@Override

@@ -32,10 +32,13 @@ public class WebDriverUtility {
 	Actions act;
 	WebDriverWait wait;
 
-	public WebDriverUtility(WebDriver driver) {
+	public WebDriverUtility(WebDriver driver) 
+	//how this constructor work please watch 3-10-25 video starting 1 min only
+	
+	{
 		this.driver = driver;
 		this.act = new Actions(driver);
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));//explicit wait
 	}
 	
 
@@ -321,9 +324,12 @@ public class WebDriverUtility {
 	 * @param screenshotName Name * @param screenshotName Name
 	 * @throws IOException if file write fails
 	 */
-	public void takeScreenshot(String screenshotName) throws IOException {
-		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File dest = new File("./screenshots/" + screenshotName + ".png");
+		public void takeScreenshot(String ss) throws IOException {
+		//File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		TakesScreenshot ts=(TakesScreenshot) driver;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		//File dest = new File("./screenshots/" + JavaUtility.currentTime() + ".png");//use this
+		File dest = new File("./screenshots/" + ss + ".png");
 		FileHandler.copy(src, dest);
 	}
 
@@ -335,7 +341,7 @@ public class WebDriverUtility {
 	 * @param screenshotName Name * @param screenshotName Name
 	 * @throws IOException if file write fails
 	 */
-	public void takeScreenshot(WebElement element , String ssname) throws IOException {
+		public void takeScreenshot(WebElement element , String ssname) throws IOException {
 		File src = element.getScreenshotAs(OutputType.FILE);
 		File dest = new File("./screenshots/" + ssname + ".png");
 		FileHandler.copy(src, dest);

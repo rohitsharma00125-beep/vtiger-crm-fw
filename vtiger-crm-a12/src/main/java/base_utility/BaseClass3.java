@@ -1,4 +1,5 @@
 package base_utility;
+
 import java.io.IOException;
 import java.time.Duration;
 
@@ -14,15 +15,13 @@ import org.testng.annotations.BeforeMethod;
 
 import generic_utility.FileUtility;
 import generic_utility.WebDriverUtility;
-import object_repository.HomePage;
-import object_repository.LoginPage;
+import practice_Utility.HomePage1;
+import practice_Utility.Login_Page1;
 
-public class BaseClass2 {
+public class BaseClass3 {
 
-
-	
-	public WebDriver driver;	
-		
+	public WebDriver driver;
+	public static WebDriver sdriver;
 
 	@BeforeClass
 	public void openBro() throws IOException {
@@ -39,39 +38,38 @@ public class BaseClass2 {
 		} else {
 			driver = new ChromeDriver();
 		}
-		
-	
+
+		sdriver = driver;
 		driver.manage().window().maximize();
-		
+
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 	}
-	
+
 	@BeforeMethod
 	public void login() throws IOException {
 		FileUtility fUtil = new FileUtility();
 		String URL = fUtil.getDataFromPropertiesFile("url");
-	
+
 		driver.get(URL);
-		LoginPage lp = new LoginPage(driver);//
-		lp.login();
+		Login_Page1 lp1 = new Login_Page1(driver);//
+		lp1.login1();
 	}
-	
+
 	@AfterMethod
 	public void logout() {
-		HomePage hp = new HomePage(driver);
-		WebElement profilePic = hp.getProfilePic();
+		HomePage1 hp1 = new HomePage1(driver);
+		WebElement profileIcon = hp1.getprofileIcon();
 
 		WebDriverUtility wdUtil = new WebDriverUtility(driver);
-		wdUtil.hover(profilePic);
-		
-		hp.getSignOutLink().click();
-		
+		wdUtil.hover(profileIcon);
+
+		hp1.getsignOut().click();
+
 	}
-	
+
 	@AfterClass
 	public void closeBro() {
 		driver.quit();
 	}
-	
-	
+
 }

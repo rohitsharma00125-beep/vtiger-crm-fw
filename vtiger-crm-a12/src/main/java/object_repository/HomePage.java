@@ -21,7 +21,7 @@ public class HomePage
 		return orgLink;
 	}
 
-			@FindBy(css = "img[src='themes/softed/images/user.PNG']")
+			@FindBy(css = "[src='themes/softed/images/user.PNG']")
 			private WebElement profilePic;
 		
 			public WebElement getProfilePic() 

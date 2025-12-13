@@ -13,11 +13,11 @@
 	</listeners>
 	
 	
-  <test thread-count="5" name="Test">
+  <test  name="Test">
     <classes>
-      <class name="listeners_extra.JustToProve1"></class>
-      <class name="listeners_extra.JustToProve2"></class>
-      <class name="listeners_extra.JustToProve3"></class>
+      <class name="listeners_extra.JustToProve1"/>
+      <class name="listeners_extra.JustToProve2"/>
+      <class name="listeners_extra.JustToProve3"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

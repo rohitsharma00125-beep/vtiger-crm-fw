@@ -8,6 +8,7 @@ import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import generic_utility.FileUtility;
 import generic_utility.WebDriverUtility;
@@ -18,7 +19,7 @@ import object_repository.VerifyOrgPage;
 
 public class CreateOrganizationTest3 
 {
-
+		 WebDriver driver=null;
 		public static void main(String[] args) throws InterruptedException, EncryptedDocumentException, IOException {
 		FileUtility fUtil = new FileUtility();
 
@@ -27,10 +28,27 @@ public class CreateOrganizationTest3
 		String URL = fUtil.getDataFromPropertiesFile("url");
 
 //		Get the data from excel file
-		String orgName = fUtil.getStringDataFromExcelFile("Organization", 13, 0);
+		String orgName = fUtil.getStringDataFromExcelFile("Organization", 8, 0);
 
 //		Open Browser 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver=null;
+		
+		if(BROWSER.equals("chrome"))
+		{
+			 driver = new ChromeDriver();
+		}
+		else if(BROWSER.equals("firefox"))
+		{
+			 driver = new FirefoxDriver();
+		}
+		else
+		{
+			System.out.println("Something went wrong");
+			
+		}
+		
+		
+		//WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 

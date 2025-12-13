@@ -6,22 +6,7 @@ import org.testng.annotations.Test;
 public class ArrayCheck 
 {
 
-	@Test(dataProvider = "getData")
-
-	public void loginToSauceDemo(String username, String password) 
-	{
-
-//				String username = "Dinga";//we should never use hard code the data
-
-//				String password = "Dingi@143";
-
-		 System.out.println(username);
-
-		 System.out.println(password);
-
-	}
-
-	@DataProvider
+	@DataProvider//Parameter Annotation
 	public Object[][] getData() 
 	{
 
@@ -52,6 +37,20 @@ public class ArrayCheck
 		cred[4][1] = "vishal@123";
 
 		return cred;
+	}
+	@Test(dataProvider = "getData")//helper attribute
+
+	public void loginToSauceDemo(String username, String password) 
+	{
+
+//				String username = "Dinga";//we should never use hard code the data
+
+//				String password = "Dingi@143";
+
+		 System.out.println(username);
+
+		 System.out.println(password);
+
 	}
 
 }

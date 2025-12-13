@@ -40,7 +40,7 @@ public class OrganizationTest4 extends BaseClass{
 		VerifyOrgPage vop = new VerifyOrgPage(driver);
 		String actOrgName = vop.getActOrgName().getText();
 
-		Assert.assertEquals(actOrgName, orgName);
+		Assert.assertEquals(actOrgName, orgName);//this method came from hard assert
 		
 //		if (actOrgName.equals(orgName + "abc")) {
 //			System.out.println("Created Organization successfully!!!!");
