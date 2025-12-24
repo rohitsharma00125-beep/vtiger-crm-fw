@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import generic_utility.WebDriverUtility2;
+import generic_utility.WebDriverUtility;
 
 public class TestScript 
 {
@@ -15,12 +15,12 @@ public class TestScript
 
 		WebDriver driver = new ChromeDriver();
 		
-		WebDriverUtility2 wdUtil = new WebDriverUtility2(driver);
+		WebDriverUtility wdUtil = new WebDriverUtility(driver);
 
-		wdUtil.openUrl();
+		//wdUtil.openUrl();
 		
 //		driver.manage().window().maximize();
-		wdUtil.winMax();
+		//wdUtil.winMax();
 		
 		WebElement profilePic = driver.findElement(By.cssSelector("img[src='themes/softed/images/user.PNG']"));
 

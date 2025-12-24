@@ -57,7 +57,7 @@ public static void main(String[] args) throws IOException, InterruptedException
 				
 				//click on + icon
 				ContactPage cp = new ContactPage(driver);
-				cp.getlpusIcon().click();
+				cp.getPlusIcon().click();
 				
 				//click on dropdown
 				WebElement dd=cp.getDropDown();

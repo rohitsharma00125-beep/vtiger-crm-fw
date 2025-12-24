@@ -28,7 +28,8 @@ public class BaseClass3 {
 		FileUtility fUtil = new FileUtility();
 		String BROWSER = fUtil.getDataFromPropertiesFile("bro");
 
-		if (BROWSER.equalsIgnoreCase("chrome")) {
+		if (BROWSER.equalsIgnoreCase("chrome")) //it is not case sensitive and equals() is case sensitive
+		{
 			driver = new ChromeDriver();
 		} else if (BROWSER.equalsIgnoreCase("edge")) {
 			System.setProperty("webdriver.edge.driver", "./resources/msedgedriver.exe");

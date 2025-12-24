@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-import generic_utility.WDUtility;
+import generic_utility.WebDriverUtility;
 
 public class Demo {
 

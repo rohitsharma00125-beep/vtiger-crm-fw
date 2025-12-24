@@ -2,7 +2,6 @@ package Practice;
 
 import java.io.IOException;
 
-import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
@@ -18,7 +17,7 @@ import practice_Utility.VerifyCP;
 @Listeners(listener_utility.List_Imp.class)
 class JustToProve00 extends BaseClass3 {
 	@Test
-	public void m1() throws EncryptedDocumentException, IOException, InterruptedException {
+	public void m1() throws  IOException, InterruptedException {
 
 		// click on contact module
 		HomePage1 h1 = new HomePage1(driver);
@@ -26,7 +25,7 @@ class JustToProve00 extends BaseClass3 {
 
 		// click on + icon
 		ContactPage cp = new ContactPage(driver);
-		cp.getlpusIcon().click();
+		cp.getPlusIcon().click();
 
 		// click on dropdown
 		WebElement dd = cp.getDropDown();

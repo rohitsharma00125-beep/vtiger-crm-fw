@@ -15,7 +15,7 @@ public ContactPage(WebDriver driver)
 
 @FindBy(css="img[src='themes/softed/images/btnL3Add.gif']")
 private WebElement plusicon;
-public WebElement getlpusIcon() 
+public WebElement getPlusIcon() 
 {
 	return plusicon;
 }
