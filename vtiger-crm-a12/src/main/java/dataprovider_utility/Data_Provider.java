@@ -10,7 +10,7 @@ public class Data_Provider
 
 		Object[][] cred = new Object[3][3];
 
-//		row => number of executions, here we used 5
+//		row => number of executions, here we used 3
 
 //		col => number of parameters, here we used 3
 

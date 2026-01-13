@@ -3,11 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="data_provider.ArrayCheck2">
+      <class name="Practice.JustToProve00">
         <methods>
-          <include name="loginToSauceDemo"/>
+          <include name="login"/>
+          <include name="genRep3"/>
+          <include name="genRep1"/>
+          <include name="closeBro"/>
+          <include name="openBro"/>
+          <include name="logout"/>
         </methods>
-      </class> <!-- data_provider.ArrayCheck2 -->
+      </class> <!-- Practice.JustToProve00 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

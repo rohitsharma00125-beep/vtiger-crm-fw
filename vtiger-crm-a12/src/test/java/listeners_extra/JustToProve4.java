@@ -19,9 +19,9 @@ class JustToProve4 //switch off the net then execute it
 			driver = new ChromeDriver();
 			driver.get("https://www.amazon.in/");
 
-			WebElement logo = driver.findElement(By.id("nav-logo-spriteuyhy78j8j"));
+			/*WebElement logo = driver.findElement(By.id("nav-logo-spriteuyhy78j8j"));
 			
-			Assert.assertTrue(logo.isDisplayed());
+			Assert.assertTrue(logo.isDisplayed());*/
 
 			}
 

@@ -1,4 +1,4 @@
-package Others;
+package starProgram;
 
 import java.time.Duration;
 import java.util.ArrayList;

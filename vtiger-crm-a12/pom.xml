@@ -1,14 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>Org.automationwithpiyush</groupId>
+
+    <groupId>org.automationwithpiyush</groupId>
     <artifactId>vtiger-crm-a12</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
+
         <!-- Selenium -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -16,7 +18,7 @@
             <version>4.34.0</version>
         </dependency>
 
-        <!-- Apache POI for Excel -->
+        <!-- Apache POI -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
@@ -29,49 +31,33 @@
             <version>5.4.1</version>
         </dependency>
 
-        <!-- TestNG for Testing Framework -->
+        <!-- TestNG -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.10.2</version>
-            <scope>test</scope>
+            <version>7.11.0</version>
         </dependency>
 
-        <!-- WebDriverManager (Automatic Driver Setup) -->
+        <!-- WebDriverManager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.9.2</version>
         </dependency>
-        <dependency>
-        	<groupId>QSpider</groupId>
-        	<artifactId>com.actiTime</artifactId>
-        	<version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.11.0</version>
-    <scope>test</scope>
-</dependency>
-<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-<dependency>
-    <groupId>com.aventstack</groupId>
-    <artifactId>extentreports</artifactId>
-    <version>5.1.2</version>
-</dependency>
 
-    	<dependency>
-    		<groupId>org.automationwithrohit</groupId>
-    		<artifactId>bdd-framework-a12</artifactId>
-    		<version>0.0.1-SNAPSHOT</version>
-    	</dependency>
+        <!-- Extent Reports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.1.2</version>
+        </dependency>
+
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Compiler Plugin: Set Java Version -->
+
+            <!-- Java Version -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -81,6 +67,19 @@
                     <target>17</target>
                 </configuration>
             </plugin>
+
+            <!-- TestNG Runner -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
