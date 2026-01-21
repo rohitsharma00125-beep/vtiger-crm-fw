@@ -3,7 +3,9 @@ package Practice;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,6 +27,10 @@ public class Demo111//jsexecuter scrollIntoView method eg
 		 Thread.sleep(3000);
 		 //btn.click();
 		 driver.quit();
+		//driver.manage().window().setSize(new Dimension(100, 100));
+		//driver.manage().window().setPosition(new Point(200,300));
+	
+		
 	
 	}
 }
