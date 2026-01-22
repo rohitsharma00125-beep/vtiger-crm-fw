@@ -1,3 +1,5 @@
+package Practice;
+
 class Rohit
 {
 public static void main (String [] args)
