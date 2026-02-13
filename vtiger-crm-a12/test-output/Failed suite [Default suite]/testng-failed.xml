@@ -3,16 +3,19 @@
 <suite name="Failed suite [Failed suite [Default suite]]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)(failed)">
     <classes>
-      <class name="listeners_extra.JustToProve0">
+      <class name="Practice.JustToProve00">
         <methods>
           <include name="login"/>
-          <include name="genRep"/>
-          <include name="logout"/>
+          <include name="genRep3"/>
+          <include name="genRep1"/>
+          <include name="m1"/>
+          <include name="genRep4"/>
+          <include name="genRep2"/>
           <include name="closeBro"/>
           <include name="openBro"/>
-          <include name="genRep3"/>
+          <include name="logout"/>
         </methods>
-      </class> <!-- listeners_extra.JustToProve0 -->
+      </class> <!-- Practice.JustToProve00 -->
     </classes>
   </test> <!-- Default test(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [Default suite]] -->

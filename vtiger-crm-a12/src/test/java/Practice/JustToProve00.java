@@ -1,3 +1,4 @@
+
 package Practice;
 
 import java.io.IOException;
@@ -52,7 +53,7 @@ class JustToProve00 extends BaseClass3 {
 		 * System.out.println("contact saved successfully"); }
 		 */
 
-		//Here we used Hard assert for verifivcation.
+		//Here we used Hard assert for verification.
 		Assert.assertEquals(vfn, fName);
 		System.out.println("successful first name");
 		Assert.assertEquals(vln, lName);
