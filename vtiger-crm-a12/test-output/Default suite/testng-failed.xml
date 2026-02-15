@@ -8,9 +8,6 @@
           <include name="login"/>
           <include name="genRep3"/>
           <include name="genRep1"/>
-          <include name="m1"/>
-          <include name="genRep4"/>
-          <include name="genRep2"/>
           <include name="closeBro"/>
           <include name="openBro"/>
           <include name="logout"/>
